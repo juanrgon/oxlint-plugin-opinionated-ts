@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "eslint"],
+  "jsPlugins": ["./dist/index.js"],
+  "ignorePatterns": ["dist/"],
+  "rules": {
+    "opinionated-ts/strict-args": "error",
+    "opinionated-ts/no-explicit-return-type": "error",
+    "opinionated-ts/no-enum": "error",
+    "opinionated-ts/no-type-assertion": "error",
+    "opinionated-ts/prefer-type-over-interface": "error",
+    "opinionated-ts/kebab-case-filename": "error",
+    "typescript/no-explicit-any": "error"
+  }
+}

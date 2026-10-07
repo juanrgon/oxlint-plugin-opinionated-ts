@@ -1,0 +1,35 @@
+{
+  "name": "oxlint-plugin-opinionated-ts",
+  "version": "0.1.0",
+  "description": "Personal oxlint JS plugin rules for consistent, type-safe TypeScript",
+  "license": "MIT",
+  "keywords": [
+    "oxlint",
+    "oxlint-plugin",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "npm run build && oxlint",
+    "test": "npm run build && node --test \"tests/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "@oxlint/plugins": "1.87.0",
+    "@types/node": "^26.6.4",
+    "oxlint": "1.87.0",
+    "typescript": "^7.0.2"
+  }
+}
